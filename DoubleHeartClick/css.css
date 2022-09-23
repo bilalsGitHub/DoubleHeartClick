@@ -1,0 +1,65 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+
+}
+
+.box{
+    background: url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80') no-repeat center center/cover;
+    width: 400px;
+    color: #fff;
+    height: 400px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    cursor: pointer;
+    justify-content: flex-end;
+    position: relative;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        overflow: hidden;
+}
+
+.fa-heart{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    animation: grow 0.6s linear;
+    transform: translate(2px,2px) scale(0);
+    color: red;
+}
+
+@keyframes grow {
+    to{
+        transform: translate(10px,10px) scale(5);
+        opacity: 0.2;
+    }
+}
+
+.sizing1{
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* Border box içine girdiğimiz padding değeri belirlediğimiz alan içerisinde eklendir */
+/* Content Box içine girdiğimiz padding değeri belirlediğimiz alan içerisinde eklendir */
+.sizing2{
+
+    box-sizing: content-box;
+    padding: 30px;
+}
